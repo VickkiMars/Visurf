@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Neomorphic Design</title>
+    <!-- Link to Google Fonts for Teko -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply Teko font */
+        body {
+            font-family: 'Teko', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling (Left Aligned) */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1), -4px -4px 6px rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            width: 100%;
+            z-index: 10;
+            border-radius: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        nav .nav-button {
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            margin-right: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav .nav-button:hover {
+            background-color: #d1d1d1;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        nav .nav-button.active {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .search-bar {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1), -4px -4px 6px rgba(255, 255, 255, 0.7);
+            width: 50%;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (Left Aligned) -->
+    <nav>
+        <button class="nav-button active" onclick="setActive(this)">Home</button>
+        <button class="nav-button" onclick="setActive(this)">About</button>
+        <button class="nav-button" onclick="setActive(this)">Services</button>
+        <button class="nav-button" onclick="setActive(this)">Contact</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Visurf</h1>
+
+        <!-- Search Bar Section -->
+        <div class="search-bar">
+            <input type="text" placeholder="Sbearch..." id="searchInput">
+            <button onclick="searchAction()">Search</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Navbar Active State -->
+    <script>
+        function setActive(element) {
+            document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        function searchAction() {
+            const query = document.getElementById('searchInput').value;
+            alert("You searched for: " + query);
+        }
+    </script>
+
+</body>
+</html>
