@@ -23,6 +23,7 @@ v2 introduces improved performance by allowing non-blocking asynchronous operati
 
 ### Installation
 **Prerequisites**
+
 Ensure you have Python 3.6 or higher installed.
 
 Make sure pip is updated:
@@ -55,10 +56,10 @@ Follow the prompts in the CLI to browse the web with the Playwright engine.
 v2 (Asynchronous)
 Start the asynchronous version:
 
-bash
-Copy
-Edit
+```bash
 python surfer.py
+```
+
 Enjoy the non-blocking, efficient browsing experience with async programming.
 
 Features
@@ -68,10 +69,10 @@ AI-powered browsing using machine learning models.
 
 Available in both synchronous and asynchronous modes for flexibility.
 
-Contributing
+### Contributing
 We welcome contributions! Please fork the repository, make changes, and create a pull request.
 
-Steps to Contribute:
+### Steps to Contribute:
 Fork the repository.
 
 Create a new branch (git checkout -b feature-branch).
