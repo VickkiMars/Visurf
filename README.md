@@ -48,6 +48,7 @@ Clone the repository:
 Run the following command to start the surfer:
 
 ```bash
+  cd visurf
   python cli.py
 ```
 
@@ -57,6 +58,7 @@ v2 (Asynchronous)
 Start the asynchronous version:
 
 ```bash
+cd visurf
 python surfer.py
 ```
 
@@ -75,13 +77,13 @@ We welcome contributions! Please fork the repository, make changes, and create a
 ### Steps to Contribute:
 Fork the repository.
 
-Create a new branch (git checkout -b feature-branch).
+Create a new branch (```git checkout -b feature-branch``).
 
 Make your changes.
 
-Commit your changes (git commit -m 'Add new feature').
+Commit your changes (```git commit -m``` 'Add new feature').
 
-Push to your forked repository (git push origin feature-branch).
+Push to your forked repository (```git push origin feature-branch```).
 
 Create a pull request.
 
